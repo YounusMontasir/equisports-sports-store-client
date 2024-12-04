@@ -28,8 +28,10 @@ const router = createBrowserRouter([
         loader: ()=> fetch("http://localhost:5000/equipments")
       },
       {
-        path: "/myequipments",
-        element: <MyEquipments></MyEquipments>
+        path: "/myequipments/:email",
+        element: <MyEquipments></MyEquipments>,
+        loader: ({params})=>fetch(`http://localhost:5000/myequipments/${params.email}`)
+
       },
       {
         path: "/allequipments",
