@@ -11,6 +11,7 @@ import AddEquipments from './pages/AddEquipments';
 import AllEquipments from './pages/AllEquipments';
 import MyEquipments from './pages/MyEquipments';
 import Home from './pages/Home';
+import AuthProvider from './provider/AuthProvider';
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+   <AuthProvider>
    <RouterProvider router={router} />
+   </AuthProvider>
   </StrictMode>,
 )
