@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Form } from 'react-router-dom';
+import { AuthContext } from '../provider/AuthProvider';
 
 
 const AddEquipments = () => {
+    const {user} = useContext(AuthContext)
     const handleForm = e =>{
         e.preventDefault()
         const form = e.target;
@@ -19,6 +21,7 @@ const AddEquipments = () => {
         const description = form.description.value;
 
         const newEquipments = {name,photo,category,customization,price,rating,processing, stock, username, useremail,description}
+        
         fetch("http://localhost:5000/equipments", {
             method: "POST",
             headers: {
@@ -51,7 +54,17 @@ const AddEquipments = () => {
               <div className='flex gap-4'>
             <div className='form-control w-[50%]'>
                 <label htmlFor="">Category</label>
-                <input type="text" placeholder="Type here"  name="category" class="input input-bordered w-full" />
+                <select class="select select-secondary w-full" name='category'>
+  <option disabled selected>Select Your Category</option>
+  <option>Cricket</option>
+  <option>Football</option>
+  <option>Basketball</option>
+  <option>Hockey</option>
+  <option>Badminton</option>
+  <option>Volleyball</option>
+  <option>Rugby</option>
+  <option>Others</option>
+</select>
             </div>
             <div className='form-control w-[50%]'>
                 <label htmlFor="">Customization</label>
@@ -84,16 +97,16 @@ const AddEquipments = () => {
               <div className='flex gap-4'>
             <div className='form-control w-[50%]'>
                 <label htmlFor="">User Name</label>
-                <input type="text" placeholder="Type here"  name="username" class="input input-bordered w-full" />
+                <input type="text" placeholder="Type here" value={user?.displayName}  name="username" class="input input-bordered w-full" />
             </div>
             <div className='form-control w-[50%]'>
                 <label htmlFor="">User Email</label>
-                <input type="text" placeholder="Type here"  name="useremail" class="input input-bordered w-full" />
+                <input type="text" placeholder="Type here" value={user?.email}  name="useremail" class="input input-bordered w-full" />
             </div>
             </div>
               {/* reow 6 */}
               
-            <div className='form-control w-full'>
+            <div className=' w-full'>
                 <label htmlFor="">Description</label>
             <textarea class="textarea textarea-primary" placeholder="Bio" name='description'></textarea>
             </div>

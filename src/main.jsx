@@ -12,6 +12,9 @@ import AllEquipments from './pages/AllEquipments';
 import MyEquipments from './pages/MyEquipments';
 import Home from './pages/Home';
 import AuthProvider from './provider/AuthProvider';
+import AuthLayout from './layout/AuthLayout';
+import Login from './pages/Login';
+import Register from './pages/Register';
 
 const router = createBrowserRouter([
   {
@@ -20,7 +23,8 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader: ()=> fetch("http://localhost:5000/equipments")
       },
       {
         path: "/myequipments",
@@ -36,6 +40,20 @@ const router = createBrowserRouter([
       }
     ]
   },
+  {
+    path: "/auth",
+    element: <AuthLayout></AuthLayout>,
+    children: [
+      {
+        path:"/auth/login",
+        element:<Login></Login>
+      },
+      {
+        path:"/auth/register",
+        element:<Register></Register>
+      },
+    ]
+  }
 ]);
 
 createRoot(document.getElementById('root')).render(
