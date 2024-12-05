@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData, useNavigate } from 'react-router-dom';
 
 import { AuthContext } from '../provider/AuthProvider';
 
 const UpdateEquipment = () => {
     const  data = useLoaderData();
-    console.log(data);
+    const navigate = useNavigate()
     const {_id,name,photo,category,customization,price,rating,processing, stock, username, useremail,description} = data;
     const {user} = useContext(AuthContext)
     const handleForm = e =>{
@@ -35,8 +35,7 @@ const UpdateEquipment = () => {
         .then(res => res.json())
         .then(data => console.log(data)
         )
-        
-       
+        navigate(`/myequipments/${user?.email}`)
 
     }
     return (

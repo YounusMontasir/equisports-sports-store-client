@@ -17,6 +17,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import EquipmentDetails from './pages/EquipmentDetails';
 import UpdateEquipment from './pages/UpdateEquipment';
+import PrivateRoute from './routes/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -30,7 +31,9 @@ const router = createBrowserRouter([
       },
       {
         path: "/myequipments/:useremail",
-        element: <MyEquipments></MyEquipments>,
+        element: <PrivateRoute>
+          <MyEquipments></MyEquipments>
+        </PrivateRoute>,
         loader: ({params})=>fetch(`http://localhost:5000/myequipments/${params.useremail}`)
 
       },
@@ -41,7 +44,9 @@ const router = createBrowserRouter([
       },
       {
         path: "/addequipments",
-        element: <AddEquipments></AddEquipments>
+        element: <PrivateRoute>
+          <AddEquipments></AddEquipments>
+        </PrivateRoute>
       }
     ]
   },
@@ -61,12 +66,16 @@ const router = createBrowserRouter([
   },
   {
         path: "/equipmentdetails/:id",
-        element: <EquipmentDetails></EquipmentDetails>,
+        element: <PrivateRoute>
+          <EquipmentDetails></EquipmentDetails>
+        </PrivateRoute>,
         loader: ({params})=>fetch(`http://localhost:5000/equipmentdetails/${params.id}`)
   },
   {
       path: "/equipmentupdate/:id",
-      element: <UpdateEquipment></UpdateEquipment>,
+      element: <PrivateRoute>
+        <UpdateEquipment></UpdateEquipment>
+      </PrivateRoute>,
       loader: ({params})=>fetch(`http://localhost:5000/equipmentupdate/${params.id}`)
   }
 ]);
