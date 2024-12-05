@@ -13,8 +13,8 @@ const Navbar = () => {
     const items = (
         <>
         <NavLink to="/"><li className='mr-3'>Home</li></NavLink>
-        <NavLink to="allequipments"><li className='mr-3'>All Equipments</li></NavLink>
-        <NavLink to="addequipments"><li className='mr-3'>Add Equipment</li></NavLink>
+        <NavLink to="/allequipments"><li className='mr-3'>All Equipments</li></NavLink>
+        <NavLink to="/addequipments"><li className='mr-3'>Add Equipment</li></NavLink>
         <NavLink to={`myequipments/${user?.email}`}><li className='mr-3'>My Equipment</li></NavLink>
         </>
     )

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { useLoaderData } from 'react-router-dom';
 
 const EquipmentDetails = () => {
@@ -10,6 +11,7 @@ const EquipmentDetails = () => {
         <div>
            <p>{name}</p>
            <img src={photo} alt="" />
+           
         </div>
     );
 };
