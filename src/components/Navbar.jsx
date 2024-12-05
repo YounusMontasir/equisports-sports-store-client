@@ -50,6 +50,7 @@ const Navbar = () => {
     </ul>
   </div>
   <div class="navbar-end">
+    {/* theme controm */}
     {
       user? <div className='flex items-center'>
         <img className='rounded-full w-10 h-10' src={user.photoURL} alt="" />

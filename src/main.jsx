@@ -16,6 +16,7 @@ import AuthLayout from './layout/AuthLayout';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import EquipmentDetails from './pages/EquipmentDetails';
+import UpdateEquipment from './pages/UpdateEquipment';
 
 const router = createBrowserRouter([
   {
@@ -62,7 +63,12 @@ const router = createBrowserRouter([
         path: "/equipmentdetails/:id",
         element: <EquipmentDetails></EquipmentDetails>,
         loader: ({params})=>fetch(`http://localhost:5000/equipmentdetails/${params.id}`)
-      }
+  },
+  {
+      path: "/equipmentupdate/:id",
+      element: <UpdateEquipment></UpdateEquipment>,
+      
+  }
 ]);
 
 createRoot(document.getElementById('root')).render(
