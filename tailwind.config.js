@@ -7,6 +7,9 @@ export default {
   theme: {
     extend: {},
   },
+  daisyui: {
+    themes: ["light", "dark"], // This will enable the light and dark themes
+  },
   plugins: [
     require('daisyui'),
   ],
