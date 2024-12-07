@@ -9,7 +9,7 @@ const MyEquipments = () => {
   const [myEquipments, setMyEquipments] = useState(data)
     
     return (
-        <div className='w-10/12 mx-auto'>
+        <div className='w-10/12 mx-auto mb-20'>
           <h1 className='text-5xl text-center mt-20 mb-20'>My Equipments</h1>
           <div className='grid grid-cols-3 gap-6'>
             {

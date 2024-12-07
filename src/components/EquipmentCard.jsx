@@ -13,9 +13,9 @@ const EquipmentCard = ({equipment}) => {
   </figure>
   <div class="">
     <h2 class="text-2xl font-semibold text-[#7ABB2D] mt-4">{name}</h2>
-    <p>{description}</p>
-    <div class="flex justify-between">
-      <p>{price}$</p>
+    <p className='mt-3'>{description}</p>
+    <div class="flex justify-between mt-4">
+      <p><span className='font-bold'>Price:</span> {price}$</p>
       <Link to={`/equipmentdetails/${equipment._id}`}><button  class="btn btn-sm bg-[#7ABB2D] text-white">Details</button></Link>
       
     </div>

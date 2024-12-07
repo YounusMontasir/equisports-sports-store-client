@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const MyEquipmentCard = ({equipment,setMyEquipments,myEquipments}) => {
     const {_id, name,photo,category,customization,price,rating,processing, stock, username, useremail,description} = equipment;
+
     const handleDelete =(id) =>{
         Swal.fire({
             title: "Are you sure?",
@@ -40,18 +41,21 @@ const MyEquipmentCard = ({equipment,setMyEquipments,myEquipments}) => {
     }
     return (
         <div>
-            <div class="card bg-base-100 border-2 border-gray-200 p-6  ">
+            <div class="card bg-base-100 border-2 border-[#7ABB2D]  p-6  ">
   <figure>
-    <img className='h-72 object-cover w-full'
+    <img className='h-56 object-cover w-full'
       src={photo}
-      alt="Shoes" />
+      alt="" />
   </figure>
-  <div class="card-body">
-    <h2 class="card-title">{name}</h2>
-    <p>{description}</p>
-    <div class="card-actions justify-end">
-        <Link to={`/equipmentupdate/${_id}`}><button className='btn btn-sm'>Update</button></Link>
-        <Link onClick={() => handleDelete(_id)}><button className='btn btn-sm'>Delete</button></Link>
+  <div class="">
+    <h2 class="text-2xl font-semibold text-[#7ABB2D] mt-4">{name}</h2>
+    <p className='mt-3'>{description}</p>
+    <div class="flex justify-between mt-4">
+    <p><span className='font-bold'>Price:</span> {price}$</p>
+        <div className='space-x-2'>
+          <Link to={`/equipmentupdate/${_id}`}><button className='btn btn-sm bg-[#7ABB2D] text-white font-bold'>Update</button></Link>
+        <Link onClick={() => handleDelete(_id)}><button className='btn btn-sm bg-[#7ABB2D] text-white font-bold'>Delete</button></Link>
+        </div>
       
     </div>
   </div>

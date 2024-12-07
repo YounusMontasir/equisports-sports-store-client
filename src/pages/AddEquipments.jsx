@@ -37,23 +37,24 @@ const AddEquipments = () => {
 
     }
     return (
-        <div className='w-6/12 mx-auto mt-10  p-10 shadow-2xl'>
+        <div className='w-6/12 mx-auto mt-10  p-10 shadow-2xl mb-20'>
+            <h1 className='mb-16 text-5xl  text-[#7ABB2D] text-center'>Add Equipments</h1>
            <form onSubmit={handleForm}>
             {/* reow 1 */}
             <div className='flex gap-4 mb-4'>
             <div className='form-control w-[50%]'>
-                <label htmlFor="">Name</label>
+                <label className='text-[#7ABB2D] font-bold mb-1' htmlFor="">Name</label>
                 <input type="text" placeholder="Type here" name="name" class="input input-bordered w-full" />
             </div>
             <div className='form-control w-[50%]'>
-                <label htmlFor="">Photo URl</label>
+                <label className='text-[#7ABB2D] font-bold mb-1' htmlFor="">Photo URl</label>
                 <input type="text" placeholder="Type here"  name="photo" class="input input-bordered w-full" />
             </div>
             </div>
               {/* reow 2 */}
               <div className='flex gap-4 mb-4'>
             <div className='form-control w-[50%]'>
-                <label htmlFor="">Category</label>
+                <label className='text-[#7ABB2D] font-bold mb-1' htmlFor="">Category</label>
                 <select class="select select-secondary w-full" name='category'>
   <option disabled selected>Select Your Category</option>
   <option>Cricket</option>
@@ -85,29 +86,29 @@ const AddEquipments = () => {
               {/* reow 1 */}
               <div className='flex gap-4 mb-4'>
             <div className='form-control w-[50%]'>
-                <label htmlFor="">Processing Time</label>
+                <label className='text-[#7ABB2D] font-bold mb-1' htmlFor="">Processing Time</label>
                 <input type="text" placeholder="Type here"  name="processing" class="input input-bordered w-full" />
             </div>
             <div className='form-control w-[50%] '>
-                <label htmlFor="">Stock Status</label>
+                <label className='text-[#7ABB2D] font-bold mb-1' htmlFor="">Stock Status</label>
                 <input type="text" placeholder="Type here"  name="stock" class="input input-bordered w-full" />
             </div>
             </div>
               {/* reow 5 */}
               <div className='flex gap-4 mb-4'>
             <div className='form-control w-[50%]'>
-                <label htmlFor="">User Name</label>
+                <label className='text-[#7ABB2D] font-bold mb-1' htmlFor="">User Name</label>
                 <input type="text" placeholder="Type here" value={user?.displayName}  name="username" class="input input-bordered w-full" />
             </div>
             <div className='form-control w-[50%]'>
-                <label htmlFor="">User Email</label>
+                <label className='text-[#7ABB2D] font-bold mb-1' htmlFor="">User Email</label>
                 <input type="text" placeholder="Type here" value={user?.email}  name="useremail" class="input input-bordered w-full" />
             </div>
             </div>
               {/* reow 6 */}
               
             <div className=' w-full mb-4 form-control'>
-                <label htmlFor="">Description</label>
+                <label className='text-[#7ABB2D] font-bold mb-1' htmlFor="">Description</label>
             <textarea class="textarea textarea-primary" placeholder="Bio" name='description'></textarea>
             </div>
             <button className='btn w-full bg-[#7ABB2D] text-white font-bold' type='submit'>Add Equipment</button>
