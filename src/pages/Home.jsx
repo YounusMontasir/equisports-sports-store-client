@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import EquipmentCard from '../components/EquipmentCard';
 import Banner from './../components/Banner';
+import Brands from '../components/Brands';
 
 const Home = () => {
     const equipments = useLoaderData();
@@ -28,7 +29,9 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <h1 className='mb-12 text-5xl mt-20 text-[#7ABB2D] text-center'>Equipments</h1>
+            {/* equipment card */}
+            <h1 className=' text-5xl mt-20 text-[#7ABB2D] text-center'>Products For You</h1>
+            <p className='mb-12 text-xl mt-4 text-gray-400 text-center'>From beginners to pros, we’ve got what you need to excel in your game.</p>
             <div className="w-11/12 mx-auto grid grid-cols-4 gap-6 mt-20 mb-20">
                 {/* Sidebar with Category Buttons */}
                 <div className="col-span-1">
@@ -55,6 +58,10 @@ const Home = () => {
                     )}
                 </div>
             </div>
+            {/* brands */}
+            <h1 className=' text-5xl mt-20 text-[#7ABB2D] text-center'>Our Trusted Brands</h1>
+            <p className='mb-12 text-xl mt-4 text-gray-400 text-center'>From beginners to pros, we’ve got what you need to excel in your game.</p>
+            <Brands></Brands>
         </div>
     );
 };
