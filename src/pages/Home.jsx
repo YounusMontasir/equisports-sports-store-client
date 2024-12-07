@@ -35,7 +35,7 @@ const Home = () => {
                         <button
                             key={index}
                             className={`btn w-full mb-2 ${
-                                selectCategory === category ? "bg-[#7ABB2D] text-white" : "bg-gray-200"
+                                selectCategory === category ? "bg-[#7ABB2D] text-white" : "bg-gray-200 dark:bg-[#140f2f58] text-white"
                             }`}
                             onClick={() => setSelectedCategory(category)}
                         >

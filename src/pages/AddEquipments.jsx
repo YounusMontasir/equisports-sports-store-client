@@ -37,10 +37,10 @@ const AddEquipments = () => {
 
     }
     return (
-        <div className='w-10/12 mx-auto mt-10'>
+        <div className='w-6/12 mx-auto mt-10  p-10 shadow-2xl'>
            <form onSubmit={handleForm}>
             {/* reow 1 */}
-            <div className='flex gap-4'>
+            <div className='flex gap-4 mb-4'>
             <div className='form-control w-[50%]'>
                 <label htmlFor="">Name</label>
                 <input type="text" placeholder="Type here" name="name" class="input input-bordered w-full" />
@@ -51,7 +51,7 @@ const AddEquipments = () => {
             </div>
             </div>
               {/* reow 2 */}
-              <div className='flex gap-4'>
+              <div className='flex gap-4 mb-4'>
             <div className='form-control w-[50%]'>
                 <label htmlFor="">Category</label>
                 <select class="select select-secondary w-full" name='category'>
@@ -66,35 +66,35 @@ const AddEquipments = () => {
   <option>Others</option>
 </select>
             </div>
-            <div className='form-control w-[50%]'>
-                <label htmlFor="">Customization</label>
+            <div className='form-control w-[50%] '>
+                <label className='text-[#7ABB2D] font-bold mb-1' htmlFor="">Customization</label>
                 <input type="text" placeholder="Type here"  name="customization" class="input input-bordered w-full" />
             </div>
             </div>
               {/* reow 3 */}
-              <div className='flex gap-4'>
+              <div className='flex gap-4 mb-4'>
             <div className='form-control w-[50%]'>
-                <label htmlFor="">Price</label>
+                <label className='text-[#7ABB2D] font-bold mb-1' htmlFor="">Price</label>
                 <input type="text" placeholder="Type here"  name="price" class="input input-bordered w-full" />
             </div>
             <div className='form-control w-[50%]'>
-                <label htmlFor="">Rating (1 to 5)</label>
+                <label className='text-[#7ABB2D] font-bold mb-1' htmlFor="">Rating (1 to 5)</label>
                 <input type="text" placeholder="Type here"  name="rating" class="input input-bordered w-full" />
             </div>
             </div>
               {/* reow 1 */}
-              <div className='flex gap-4'>
+              <div className='flex gap-4 mb-4'>
             <div className='form-control w-[50%]'>
                 <label htmlFor="">Processing Time</label>
                 <input type="text" placeholder="Type here"  name="processing" class="input input-bordered w-full" />
             </div>
-            <div className='form-control w-[50%]'>
+            <div className='form-control w-[50%] '>
                 <label htmlFor="">Stock Status</label>
                 <input type="text" placeholder="Type here"  name="stock" class="input input-bordered w-full" />
             </div>
             </div>
               {/* reow 5 */}
-              <div className='flex gap-4'>
+              <div className='flex gap-4 mb-4'>
             <div className='form-control w-[50%]'>
                 <label htmlFor="">User Name</label>
                 <input type="text" placeholder="Type here" value={user?.displayName}  name="username" class="input input-bordered w-full" />
@@ -106,11 +106,11 @@ const AddEquipments = () => {
             </div>
               {/* reow 6 */}
               
-            <div className=' w-full'>
+            <div className=' w-full mb-4 form-control'>
                 <label htmlFor="">Description</label>
             <textarea class="textarea textarea-primary" placeholder="Bio" name='description'></textarea>
             </div>
-            <button className='btn w-full' type='submit'>Add Equipment</button>
+            <button className='btn w-full bg-[#7ABB2D] text-white font-bold' type='submit'>Add Equipment</button>
             
            </form>
         </div>

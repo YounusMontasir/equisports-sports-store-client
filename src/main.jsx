@@ -31,7 +31,6 @@ const App = () => {
     }
   }, []);
 
-  // Toggle dark mode
   const toggleDarkMode = () => {
     if (darkMode) {
       setDarkMode(false);
