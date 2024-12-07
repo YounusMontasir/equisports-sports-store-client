@@ -109,7 +109,7 @@ const Login = () => {
             </label>
           </div>
           <div class="form-control mt-6">
-            <button class="btn bg-[#008080] text-white font-bold">Login</button>
+            <button class="btn bg-[#7ABB2D] text-white font-bold">Login</button>
           </div>
           <p className="text-center">
             Doesn't have an Account?{" "}
@@ -121,7 +121,7 @@ const Login = () => {
         <div class="divider">OR</div>
         <div
           onClick={handleGoogle}
-          className="flex items-center justify-center gap-2 btn btn-accent w-10/12 mx-auto mt-10"
+          className="flex items-center justify-center gap-2 btn bg-[#7ABB2D] text-white font-bold w-10/12 mx-auto mt-10"
         >
           <img
             className="w-8 h-8"

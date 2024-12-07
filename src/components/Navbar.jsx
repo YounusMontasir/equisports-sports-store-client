@@ -34,7 +34,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar  w-11/12 mx-auto">
+    <div className="navbar w-full md:w-11/12 mx-auto">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabindex="0" role="button" className="btn btn-ghost lg:hidden">
@@ -65,7 +65,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <label className="flex cursor-pointer gap-2">
+        <label className="flex cursor-pointer gap-2 mr-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -101,7 +101,7 @@ const Navbar = () => {
 
         {user ? (
           <div className='flex items-center'>
-            <img className='rounded-full w-10 h-10' src={user.photoURL} alt="User" />
+            <img className='rounded-full w-10 h-10 mr-2' src={user.photoURL} alt="User" />
             <Link to="/"><button onClick={signOutUser} className='btn btn-sm bg-[#7ABB2D] text-white'>Logout</button></Link>
           </div>
         ) : (

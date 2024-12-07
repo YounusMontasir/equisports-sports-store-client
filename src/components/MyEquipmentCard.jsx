@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Tooltip } from 'react-tooltip';
+import { Tooltip as ReactTooltip } from 'react-tooltip'
 import Swal from 'sweetalert2';
 
 const MyEquipmentCard = ({equipment,setMyEquipments,myEquipments}) => {
@@ -54,7 +56,8 @@ const MyEquipmentCard = ({equipment,setMyEquipments,myEquipments}) => {
     <p><span className='font-bold'>Price:</span> {price}$</p>
         <div className='space-x-2'>
           <Link to={`/equipmentupdate/${_id}`}><button className='btn btn-sm bg-[#7ABB2D] text-white font-bold'>Update</button></Link>
-        <Link onClick={() => handleDelete(_id)}><button className='btn btn-sm bg-[#7ABB2D] text-white font-bold'>Delete</button></Link>
+        <Link onClick={() => handleDelete(_id)}><button data-tooltip-id="my-tooltip" data-tooltip-content="Permanantly delete the Item" className='btn btn-sm bg-[#7ABB2D] text-white font-bold'>Delete</button></Link>
+        <Tooltip id="my-tooltip" />
         </div>
       
     </div>

@@ -28,6 +28,7 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
+            <h1 className='mb-12 text-5xl mt-20 text-[#7ABB2D] text-center'>Equipments</h1>
             <div className="w-11/12 mx-auto grid grid-cols-4 gap-6 mt-20 mb-20">
                 {/* Sidebar with Category Buttons */}
                 <div className="col-span-1">

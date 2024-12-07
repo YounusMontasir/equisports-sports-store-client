@@ -144,7 +144,7 @@ const Register = () => {
 
           </div>
           <div class="form-control mt-6">
-            <button class="btn bg-[#008080] text-white font-bold">Register</button>
+            <button class="btn bg-[#7ABB2D] text-white font-bold">Register</button>
           </div>
           <p className="text-center">
         Already have an account?{" "}
@@ -154,7 +154,7 @@ const Register = () => {
       </p>
         </form>
         <div class="divider">OR</div>
-        <div onClick={handleGoogle} className="flex items-center justify-center gap-2 btn btn-accent w-10/12 mx-auto mt-10">
+        <div onClick={handleGoogle} className="flex items-center justify-center gap-2 btn bg-[#7ABB2D] text-white font-bold w-10/12 mx-auto mt-10">
             <img className="w-8 h-8" src="https://i.ibb.co.com/6tyhjC2/google.png" alt="" />
             <p>Continue With Google</p>
         </div>
