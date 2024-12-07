@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 import EquipmentCard from '../components/EquipmentCard';
 import Banner from './../components/Banner';
 import Brands from '../components/Brands';
+import Review from '../components/Review';
 
 const Home = () => {
     const equipments = useLoaderData();
@@ -30,11 +31,11 @@ const Home = () => {
         <div>
             <Banner></Banner>
             {/* equipment card */}
-            <h1 className=' text-5xl mt-20 text-[#7ABB2D] text-center'>Products For You</h1>
+            <h1 className='text-3xl md:text-5xl mt-20 text-[#7ABB2D] text-center'>PRODUCTS FOR YOU</h1>
             <p className='mb-12 text-xl mt-4 text-gray-400 text-center'>From beginners to pros, we’ve got what you need to excel in your game.</p>
-            <div className="w-11/12 mx-auto grid grid-cols-4 gap-6 mt-20 mb-20">
+            <div className="w-10/12  gap-6 mt-20 mb-20 mx-auto">
                 {/* Sidebar with Category Buttons */}
-                <div className="col-span-1">
+                <div className="grid grid-cols-3 lg:gap-3">
                     {categoryList.map((category, index) => (
                         <button
                             key={index}
@@ -48,7 +49,7 @@ const Home = () => {
                     ))}
                 </div>
 
-                <div className="col-span-3 grid grid-cols-3 gap-4">
+                <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
                     {filteredEquipments.length > 0 ? (
                         filteredEquipments.map((equipment) => (
                             <EquipmentCard key={equipment._id} equipment={equipment} />
@@ -59,9 +60,12 @@ const Home = () => {
                 </div>
             </div>
             {/* brands */}
-            <h1 className=' text-5xl mt-20 text-[#7ABB2D] text-center'>Our Trusted Brands</h1>
+            <h1 className='text-3xl md:text-5xl mt-20 text-[#7ABB2D] text-center'>OUR TRUSTED BRAND</h1>
             <p className='mb-12 text-xl mt-4 text-gray-400 text-center'>From beginners to pros, we’ve got what you need to excel in your game.</p>
             <Brands></Brands>
+            <h1 className=' text-3xl md:text-5xl mt-20 text-[#7ABB2D] text-center'>WHAT OUT CUSTOMER SAY’S</h1>
+            <p className='mb-12 text-xl mt-4 text-gray-400 text-center'>From beginners to pros, we’ve got what you need to excel in your game.</p>
+            <Review></Review>
         </div>
     );
 };

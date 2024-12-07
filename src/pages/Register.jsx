@@ -59,9 +59,8 @@ const Register = () => {
       setUser(user)
       navigate("/")
       Swal.fire({
-        position: "top-end",
         icon: "success",
-        title: "Your work has been saved",
+        title: "Registration Completed",
         showConfirmButton: false,
         timer: 1500
       });
@@ -70,9 +69,8 @@ const Register = () => {
   })
   .catch(error =>{
     Swal.fire({
-        position: "top-end",
-        icon: "success",
-        title: "Your work has b failed",
+        icon: "error",
+        title: "Failed",
         showConfirmButton: false,
         timer: 1500
       });

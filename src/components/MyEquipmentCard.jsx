@@ -7,6 +7,7 @@ import Swal from 'sweetalert2';
 const MyEquipmentCard = ({equipment,setMyEquipments,myEquipments}) => {
     const {_id, name,photo,category,customization,price,rating,processing, stock, username, useremail,description} = equipment;
 
+
     const handleDelete =(id) =>{
         Swal.fire({
             title: "Are you sure?",

@@ -14,12 +14,13 @@ import Register from './pages/Register';
 import EquipmentDetails from './pages/EquipmentDetails';
 import UpdateEquipment from './pages/UpdateEquipment';
 import PrivateRoute from './routes/PrivateRoute';
+import ErrorPage from './pages/ErrorPage';
 
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
 
-  // Check the local storage for the theme preference
+
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
@@ -112,6 +113,10 @@ const App = () => {
       loader: ({ params }) =>
         fetch(`http://localhost:5000/equipmentupdate/${params.id}`),
     },
+    {
+      path: "*",
+      element: <ErrorPage></ErrorPage>
+    }
   ]);
 
   return (

@@ -2,8 +2,9 @@ import React, { useContext } from 'react';
 import { Link, useLoaderData, useNavigate } from 'react-router-dom';
 
 import { AuthContext } from '../provider/AuthProvider';
+import Swal from 'sweetalert2';
 
-const UpdateEquipment = () => {
+const UpdateEquipment = ({setMyEquipments}) => {
     const  data = useLoaderData();
     const navigate = useNavigate()
     const {_id,name,photo,category,customization,price,rating,processing, stock, username, useremail,description} = data;
@@ -33,7 +34,15 @@ const UpdateEquipment = () => {
             body: JSON.stringify(newEquipments)
         })
         .then(res => res.json())
-        .then(data => console.log(data)
+        .then(data => {
+            Swal.fire({
+                icon: "success",
+                title: "Updated Successfully",
+                showConfirmButton: false,
+                timer: 1500
+              });
+            
+        }
         )
         navigate(`/myequipments/${user?.email}`)
 
@@ -111,7 +120,7 @@ const UpdateEquipment = () => {
               
             <div className=' mb-4 form-control w-full'>
                 <label className='text-[#7ABB2D] font-bold mb-1' htmlFor="">Description</label>
-            <textarea class="textarea textarea-primary" defaultValue={description} placeholder="Bio" name='description'></textarea>
+            <textarea class="textarea textarea-primary" defaultValue={description} placeholder="Description" name='description'></textarea>
             </div>
             <button className='btn w-full bg-[#7ABB2D] text-white font-bold' type='submit'>Update Equipment</button>
             

@@ -27,9 +27,9 @@ const Navbar = () => {
   const items = (
     <>
       <NavLink to="/"><li className='text-center'>Home</li></NavLink>
-      <NavLink to="/allequipments"><li className=''>All Equipments</li></NavLink>
-      <NavLink to="/addequipments"><li className=''>Add Equipment</li></NavLink>
-      <NavLink to={`/myequipments/${user?.email}`}><li className=''>My Equipment</li></NavLink>
+      <NavLink to="/allequipments"><li className='text-center'>All Equipments</li></NavLink>
+      <NavLink to="/addequipments"><li className='text-center'>Add Equipment</li></NavLink>
+      <NavLink to={`/myequipments/${user?.email}`}><li className='text-center'>My Equipment</li></NavLink>
     </>
   );
 
@@ -53,7 +53,7 @@ const Navbar = () => {
           </div>
           <ul
             tabindex="0"
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+            className="menu menu-sm dropdown-content bg-[#7ABB2D] text-white font-bold rounded-box z-[10] mt-3 w-52 p-2 shadow">
             {items}
           </ul>
         </div>
@@ -65,7 +65,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <label className="flex cursor-pointer gap-2 mr-1">
+        <label className="flex cursor-pointer gap-2 md:mr-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -101,7 +101,7 @@ const Navbar = () => {
 
         {user ? (
           <div className='flex items-center'>
-            <img className='rounded-full w-10 h-10 mr-2' src={user.photoURL} alt="User" />
+            <img className='rounded-full w-10 h-10 md:mr-2' title={user.displayName} src={user.photoURL} alt="User" />
             <Link to="/"><button onClick={signOutUser} className='btn btn-sm bg-[#7ABB2D] text-white'>Logout</button></Link>
           </div>
         ) : (

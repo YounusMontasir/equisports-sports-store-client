@@ -11,7 +11,7 @@ const AllEquipments = () => {
     }
     return (
         <div className='w-full lg:w-10/12 mx-auto mt-16 mb-20'>
-          <h1 className='mb-12 text-5xl  text-[#7ABB2D] text-center'>All Equipments</h1>
+          <h1 className='mb-12 sm:text-3xl md:text-5xl  text-[#7ABB2D] text-center'>All Equipments</h1>
           <div className='flex justify-end items-center mb-10'>
             <button className='btn bg-[#7ABB2D] text-white font-bold' onClick={handleSortByPrice}>Sort by Price
               <img className='h-5 w-5' src="https://i.ibb.co.com/Ypp11cM/sort.png" alt="" />

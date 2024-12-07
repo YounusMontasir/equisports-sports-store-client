@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Form } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
+import Swal from 'sweetalert2';
 
 
 const AddEquipments = () => {
@@ -30,15 +31,22 @@ const AddEquipments = () => {
             body: JSON.stringify(newEquipments)
         })
         .then(res => res.json())
-        .then(data => console.log(data)
+        .then(data => {
+            Swal.fire({
+                icon: "success",
+                title: "Item added Successfully",
+                showConfirmButton: false,
+                timer: 1500
+              });
+        }
         )
         
        
 
     }
     return (
-        <div className='w-6/12 mx-auto mt-10  p-10 shadow-2xl mb-20'>
-            <h1 className='mb-16 text-5xl  text-[#7ABB2D] text-center'>Add Equipments</h1>
+        <div className='w-full lg:w-6/12 mx-auto mt-10  p-10 shadow-2xl mb-20'>
+            <h1 className='mb-16 sm:text-3xl md:text-5xl text-[#7ABB2D] text-center'>Add Equipments</h1>
            <form onSubmit={handleForm}>
             {/* reow 1 */}
             <div className='flex gap-4 mb-4'>
@@ -109,7 +117,7 @@ const AddEquipments = () => {
               
             <div className=' w-full mb-4 form-control'>
                 <label className='text-[#7ABB2D] font-bold mb-1' htmlFor="">Description</label>
-            <textarea class="textarea textarea-primary" placeholder="Bio" name='description'></textarea>
+            <textarea class="textarea textarea-primary" placeholder="Description" name='description'></textarea>
             </div>
             <button className='btn w-full bg-[#7ABB2D] text-white font-bold' type='submit'>Add Equipment</button>
             

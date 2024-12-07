@@ -28,15 +28,20 @@ const Login = () => {
         setUser(user);
         navigate(location?.state ? location.state : "/");
         Swal.fire({
-            position: "top-end",
+            
             icon: "success",
-            title: "Your work has been saved",
+            title: "Logged in Successfully",
             showConfirmButton: false,
             timer: 1500
           });
       })
       .catch((error) => {
-        
+        Swal.fire({
+          icon: "error",
+          title: "Failed",
+          showConfirmButton: false,
+          timer: 1500
+        });
       });
   };
   const handleGoogle = () => {
@@ -46,9 +51,8 @@ const Login = () => {
         setUser(user);
         navigate(location?.state ? location.state : "/");
         Swal.fire({
-            position: "top-end",
             icon: "success",
-            title: "Your work has been saved",
+            title: "Logged in Successfully",
             showConfirmButton: false,
             timer: 1500
           });
@@ -56,8 +60,7 @@ const Login = () => {
       .catch((error) => {
         
         Swal.fire({
-            position: "top-end",
-            icon: "success",
+            icon: "error",
             title: "Failed",
             showConfirmButton: false,
             timer: 1500
