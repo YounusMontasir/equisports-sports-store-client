@@ -13,7 +13,7 @@ const Footer = () => {
         </div>
         
          
-          <div class="flex  gap-4">
+          <div class="flex text-gray-300  gap-4">
             <a>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +50,7 @@ const Footer = () => {
           </div>
         
         
-      <p className='text-center mt-6'>&copy; 2024 EquiSports. All Rights Reserved.</p>
+      <p className='text-center text-gray-300 mt-6'>&copy; 2024 EquiSports. All Rights Reserved.</p>
 
       </footer>
     );

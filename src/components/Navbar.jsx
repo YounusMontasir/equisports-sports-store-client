@@ -66,7 +66,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         <label className="flex cursor-pointer gap-2 md:mr-1">
-          <svg
+        <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
             height="20"
@@ -85,7 +85,7 @@ const Navbar = () => {
             className="toggle theme-controller"
             checked={darkMode}
             onChange={toggleDarkMode} />
-          <svg
+           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
             height="20"
@@ -101,7 +101,7 @@ const Navbar = () => {
 
         {user ? (
           <div className='flex items-center'>
-            <img className='rounded-full w-10 h-10 md:mr-2' title={user.displayName} src={user.photoURL} alt="User" />
+            <img className='rounded-full w-6 h-6 md:w-10 md:h-10 md:mr-2' title={user.displayName} src={user.photoURL} alt="User" />
             <Link to="/"><button onClick={signOutUser} className='btn btn-sm bg-[#7ABB2D] text-white'>Logout</button></Link>
           </div>
         ) : (

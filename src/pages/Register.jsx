@@ -21,7 +21,7 @@ const Register = () => {
     const image = form.get("image");
     const email = form.get("email");
     const password = form.get("password");
-    console.log(name,email, image, password);
+    // console.log(name,email, image, password);
     
     
     if(password.length< 6){
@@ -42,7 +42,7 @@ const Register = () => {
         Swal.fire({
             position: "top-end",
             icon: "success",
-            title: "Your work has been saved",
+            title: "Registration Completed",
             showConfirmButton: false,
             timer: 1500
           });

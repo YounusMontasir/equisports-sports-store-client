@@ -61,10 +61,17 @@ const Home = () => {
             </div>
             {/* brands */}
             <h1 className='text-3xl md:text-5xl mt-20 text-[#7ABB2D] text-center'>OUR TRUSTED BRAND</h1>
-            <p className='mb-12 text-xl mt-4 text-gray-400 text-center'>From beginners to pros, we’ve got what you need to excel in your game.</p>
+            <p className='mb-12 text-xl mt-4 text-gray-400 text-center'>Chosen by athletes, trusted for performance. See why our gear is the go-to for sports enthusiasts everywhere.
+
+
+
+
+
+
+</p>
             <Brands></Brands>
             <h1 className=' text-3xl md:text-5xl mt-20 text-[#7ABB2D] text-center'>WHAT OUT CUSTOMER SAY’S</h1>
-            <p className='mb-12 text-xl mt-4 text-gray-400 text-center'>From beginners to pros, we’ve got what you need to excel in your game.</p>
+            <p className='mb-12 text-xl mt-4 text-gray-400 text-center'>Hear from athletes and enthusiasts who trust our gear to elevate their game. Real reviews, real results</p>
             <Review></Review>
         </div>
     );

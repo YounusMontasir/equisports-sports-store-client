@@ -17,8 +17,7 @@ const Brands = () => {
                     delay: 3000,
                     disableOnInteraction: false,
                   }}
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
+                
             >
                 <SwiperSlide className='flex justify-center items-center'>
                     <img

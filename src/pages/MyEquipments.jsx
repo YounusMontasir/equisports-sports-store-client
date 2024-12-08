@@ -1,5 +1,5 @@
-import React, { useContext, useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import React, { useContext,  useState } from 'react';
+import { useLoaderData, useParams } from 'react-router-dom';
 
 import EquipmentCard from '../components/EquipmentCard';
 import MyEquipmentCard from '../components/MyEquipmentCard';
@@ -7,6 +7,8 @@ import MyEquipmentCard from '../components/MyEquipmentCard';
 const MyEquipments = () => {
     const data = useLoaderData()
   const [myEquipments, setMyEquipments] = useState(data)
+
+    
     
     return (
         <div className='w-10/12 mx-auto mb-20'>

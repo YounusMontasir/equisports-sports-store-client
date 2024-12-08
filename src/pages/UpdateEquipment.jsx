@@ -4,7 +4,7 @@ import { Link, useLoaderData, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 import Swal from 'sweetalert2';
 
-const UpdateEquipment = ({setMyEquipments}) => {
+const UpdateEquipment = () => {
     const  data = useLoaderData();
     const navigate = useNavigate()
     const {_id,name,photo,category,customization,price,rating,processing, stock, username, useremail,description} = data;
@@ -26,7 +26,7 @@ const UpdateEquipment = ({setMyEquipments}) => {
 
         const newEquipments = {name,photo,category,customization,price,rating,processing, stock, username, useremail,description}
         
-        fetch(`http://localhost:5000/equipmentupdate/${_id}`, {
+        fetch(`https://equisports-server-gules.vercel.app/equipmentupdate/${_id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"
@@ -41,6 +41,7 @@ const UpdateEquipment = ({setMyEquipments}) => {
                 showConfirmButton: false,
                 timer: 1500
               });
+              
             
         }
         )
@@ -48,7 +49,7 @@ const UpdateEquipment = ({setMyEquipments}) => {
 
     }
     return (
-        <div className='w-6/12 mx-auto mt-10  p-10 shadow-2xl'>
+        <div className='w-full lg:w-6/12 mx-auto mt-10  p-10 shadow-2xl'>
             <h1 className='mb-16 text-5xl  text-[#7ABB2D] text-center'>Update Equipments</h1>
            <form onSubmit={handleForm}>
             {/* reow 1 */}

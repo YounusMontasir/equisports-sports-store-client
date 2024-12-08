@@ -32,6 +32,7 @@ const App = () => {
     }
   }, []);
 
+
   const toggleDarkMode = () => {
     if (darkMode) {
       setDarkMode(false);
@@ -52,7 +53,7 @@ const App = () => {
         {
           path: "/",
           element: <Home />,
-          loader: () => fetch("http://localhost:5000/equipments"),
+          loader: () => fetch("https://equisports-server-gules.vercel.app/equipments"),
         },
         {
           path: "/myequipments/:useremail",
@@ -62,12 +63,12 @@ const App = () => {
             </PrivateRoute>
           ),
           loader: ({ params }) =>
-            fetch(`http://localhost:5000/myequipments/${params.useremail}`),
+            fetch(`https://equisports-server-gules.vercel.app/myequipments/${params.useremail}`),
         },
         {
           path: "/allequipments",
           element: <AllEquipments />,
-          loader: () => fetch("http://localhost:5000/allequipments"),
+          loader: () => fetch("https://equisports-server-gules.vercel.app/allequipments"),
         },
         {
           path: "/addequipments",
@@ -101,7 +102,7 @@ const App = () => {
         </PrivateRoute>
       ),
       loader: ({ params }) =>
-        fetch(`http://localhost:5000/equipmentdetails/${params.id}`),
+        fetch(`https://equisports-server-gules.vercel.app/equipmentdetails/${params.id}`),
     },
     {
       path: "/equipmentupdate/:id",
@@ -111,7 +112,7 @@ const App = () => {
         </PrivateRoute>
       ),
       loader: ({ params }) =>
-        fetch(`http://localhost:5000/equipmentupdate/${params.id}`),
+        fetch(`https://equisports-server-gules.vercel.app/equipmentupdate/${params.id}`),
     },
     {
       path: "*",
