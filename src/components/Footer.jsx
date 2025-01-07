@@ -1,15 +1,15 @@
 import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
 
 const Footer = () => {
     return (
         <footer class=" bg-neutral flex  flex-col items-center  p-10">
         <h2 className='text-[#7ABB2D] text-4xl font-bold mb-6'>Equi<span className='text-white text-center'>Sports</span></h2>
         <div className='text-[#7ABB2D] text-xl flex flex-col lg:flex-row gap-4 mb-6'>
-          <p>Home</p>
-          <p>About Us</p>
-          <p>Contact Us</p>
-          <p>Legal Notice</p>
-          <p>Our Terms</p>
+           <Link to="/"><p className='text-center'>Home</p></Link>
+                <Link to="/allequipments"><p className='text-center'>Equipments</p></Link>
+                <a href="#review"><p className='text-center'>Review</p></a>
+                <a href='#brand'><p className='text-center'>Brands</p></a>
         </div>
         
          

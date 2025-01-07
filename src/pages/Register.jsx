@@ -40,7 +40,6 @@ const Register = () => {
         updateUserProfile(name, image)
         navigate("/")
         Swal.fire({
-            position: "top-end",
             icon: "success",
             title: "Registration Completed",
             showConfirmButton: false,

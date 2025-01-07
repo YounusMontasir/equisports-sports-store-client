@@ -5,7 +5,7 @@ const EquipmentCard = ({equipment}) => {
     const {name,photo,category,customization,price,rating,processing, stock, username, useremail,description} = equipment;
     return (
         <div>
-            <div class="card bg-base-100 border-2 border-[#7ABB2D] p-6  ">
+            <div class="card bg-base-100 border-2 border-[#7ABB2D] p-4  ">
   <figure>
     <img className='h-56 object-cover w-full'
       src={photo}

@@ -34,7 +34,9 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar w-full md:w-11/12 mx-auto">
+    <div className={`${
+    darkMode ? 'bg-[#1D232A] ' : 'bg-white'  } w-full   mx-auto sticky top-0 z-10 shadow-lg`}>
+    <div className={`navbar w-full md:w-11/12 mx-auto`}>
       <div className="navbar-start">
         <div className="dropdown">
           <div tabindex="0" role="button" className="btn btn-ghost lg:hidden">
@@ -108,6 +110,7 @@ const Navbar = () => {
           <Link to="/auth/login"><button className='btn btn-sm bg-[#7ABB2D] text-white'>Login</button></Link>
         )}
       </div>
+    </div>
     </div>
   );
 };

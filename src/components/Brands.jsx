@@ -8,7 +8,7 @@ import { Autoplay } from 'swiper/modules';
 
 const Brands = () => {
     return (
-        <div className='mb-24'>
+        <div id='brand' className='mb-24'>
             <Swiper
             modules={[Autoplay]}
                 spaceBetween={0}

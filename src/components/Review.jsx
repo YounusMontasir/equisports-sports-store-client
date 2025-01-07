@@ -7,7 +7,7 @@ import { Autoplay, EffectCoverflow } from "swiper/modules";
 
 const Review = () => {
   return (
-    <div className="swiper-container mb-24">
+    <div id="review" className="swiper-container mb-24">
       <Swiper
         spaceBetween={50}
         slidesPerView={3}

@@ -4,6 +4,7 @@ import EquipmentCard from '../components/EquipmentCard';
 import Banner from './../components/Banner';
 import Brands from '../components/Brands';
 import Review from '../components/Review';
+import Faq from '../components/Faq';
 
 const Home = () => {
     const equipments = useLoaderData();
@@ -49,7 +50,7 @@ const Home = () => {
                     ))}
                 </div>
 
-                <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+                <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
                     {filteredEquipments.length > 0 ? (
                         filteredEquipments.map((equipment) => (
                             <EquipmentCard key={equipment._id} equipment={equipment} />
@@ -73,6 +74,9 @@ const Home = () => {
             <h1 className=' text-3xl md:text-5xl mt-20 text-[#7ABB2D] text-center'>WHAT OUT CUSTOMER SAY’S</h1>
             <p className='mb-12 text-xl mt-4 text-gray-400 text-center'>Hear from athletes and enthusiasts who trust our gear to elevate their game. Real reviews, real results</p>
             <Review></Review>
+            <h1 className=' text-3xl md:text-5xl mt-20 text-[#7ABB2D] text-center'>Frequently Asked Questions</h1>
+            <p className='mb-12 text-xl mt-4 text-gray-400 text-center'>Find answers to common queries about using EquiSports for buying, selling, and managing sports equipment.</p>
+            <Faq></Faq>
         </div>
     );
 };
