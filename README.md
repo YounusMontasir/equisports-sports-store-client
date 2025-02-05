@@ -58,8 +58,8 @@ Ensure you have the following installed:
 ### Step 1: Clone the Repository
 
 ```sh
-git clone https://github.com/YounusMontasir/suggestify-product-recommendation-client.git
-cd suggestify-product-recommendation-client
+git clone https://github.com/YounusMontasir/equisports-sports-store-client.git
+cd equisports-sports-store-client
 ```
 
 ### Step 2: Install Dependencies
